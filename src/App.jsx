@@ -1,9 +1,10 @@
 import "./App.css";
+import AppRouters from "./components/appRouters";
 
 function App() {
   return (
     <div className="App">
-      <h1>React - Vite Work</h1>
+      <AppRouters />
     </div>
   );
 }
