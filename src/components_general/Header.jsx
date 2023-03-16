@@ -41,6 +41,15 @@ export default function Header() {
                 <strong>Sign Up</strong>
               </Link>
             </li>
+            <li className="nav-item">
+              <Link
+                to="/form-toys"
+                className="nav-link"
+                style={{ color: "#ececf1" }}
+              >
+                <strong>Form Toys</strong>
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>

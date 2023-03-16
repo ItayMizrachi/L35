@@ -17,6 +17,7 @@ export default function AppRouters() {
         <Route path="/tv" element={<TvPage />} />
         <Route path="/tv/:index" element={<TvInfoPage />} />
         <Route path="/sign-up" element={<SignUp />} />
+        <Route path="/form-toys" element={<FormToys />} />
         <Route path="/*" element={<Page404 />} />
       </Routes>
       <Footer />
