@@ -28,8 +28,17 @@ export default function Header() {
         >
           <ul className="navbar-nav ml-auto">
             <li className="nav-item">
-              <Link to="/" className="nav-link" style={{ color: "#ececf1" }}>
-                <strong>Page 2</strong>
+              <Link to="/tv" className="nav-link" style={{ color: "#ececf1" }}>
+                <strong>Tv</strong>
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                to="/sign-up"
+                className="nav-link"
+                style={{ color: "#ececf1" }}
+              >
+                <strong>Sign Up</strong>
               </Link>
             </li>
           </ul>
