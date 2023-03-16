@@ -13,7 +13,7 @@ export default function Header() {
           <strong>Home</strong>
         </Link>
         <button
-          className="navbar-toggler btn btn-light bg-info"
+          className="navbar-toggler btn btn-light bg-primary"
           type="button"
           aria-controls="navbarNav"
           aria-expanded={navbarOpen}
@@ -57,6 +57,15 @@ export default function Header() {
                 style={{ color: "#ececf1" }}
               >
                 <strong>Counter</strong>
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                to="/todo"
+                className="nav-link"
+                style={{ color: "#ececf1" }}
+              >
+                <strong>To Do</strong>
               </Link>
             </li>
           </ul>

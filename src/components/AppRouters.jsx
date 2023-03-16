@@ -7,6 +7,7 @@ import FormToys from "./FormToys";
 import Home from "./Home";
 import Page404 from "./Page404";
 import SignUp from "./SignUp";
+import ToDoPage from "./ToDoPage";
 import TvInfoPage from "./TvInfoPage";
 import TvPage from "./TvPage";
 
@@ -21,6 +22,7 @@ export default function AppRouters() {
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/toys" element={<FormToys />} />
         <Route path="/counter" element={<CounterParent />} />
+        <Route path="/todo" element={<ToDoPage />} />
         <Route path="/*" element={<Page404 />} />
       </Routes>
       <Footer />
