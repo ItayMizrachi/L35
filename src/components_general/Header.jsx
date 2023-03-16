@@ -43,11 +43,20 @@ export default function Header() {
             </li>
             <li className="nav-item">
               <Link
-                to="/form-toys"
+                to="/toys"
                 className="nav-link"
                 style={{ color: "#ececf1" }}
               >
                 <strong>Form Toys</strong>
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                to="/counter"
+                className="nav-link"
+                style={{ color: "#ececf1" }}
+              >
+                <strong>Counter</strong>
               </Link>
             </li>
           </ul>

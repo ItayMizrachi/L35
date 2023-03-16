@@ -1,11 +1,15 @@
+import { useState } from "react";
 import "./App.css";
 import AppRouters from "./components/appRouters";
+import { MyContext } from "./context/myContext";
 
 function App() {
+  const [counter, setCounter] = useState(35);
+
   return (
-    <div className="App">
+    <MyContext.Provider value={{ counter, setCounter }}>
       <AppRouters />
-    </div>
+    </MyContext.Provider>
   );
 }
 

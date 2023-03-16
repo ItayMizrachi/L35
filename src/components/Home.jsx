@@ -1,5 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
+import { MyContext } from "../context/myContext";
 
 export default function Home() {
-  return <div>Home</div>;
+  const { counter } = useContext(MyContext);
+  return (
+    <div className="container">
+      <h2>Home - {counter}</h2>
+    </div>
+  );
 }
