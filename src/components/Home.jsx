@@ -5,7 +5,7 @@ import WeatherList from "./WeatherList";
 
 export default function Home() {
   const [ar, setAr] = useState([]);
-  const searchQ = "tel-aviv" || ref.current.value;
+  const searchQ = "tel-aviv";
 
   useEffect(() => {
     doApi(searchQ);
