@@ -5,14 +5,15 @@ import WeatherList from "./WeatherList";
 
 export default function Home() {
   const [ar, setAr] = useState([]);
+  const searchQ = "tel-aviv" || ref.current.value;
 
   useEffect(() => {
-    doApi();
+    doApi(searchQ);
   }, []);
 
-  const doApi = async () => {
+  const doApi = async (searchQ) => {
     try {
-      const url = `https://api.openweathermap.org/data/2.5/weather?q=tel-aviv&appid=a01a81077cd503a806e77c2d7f006510`;
+      const url = `https://api.openweathermap.org/data/2.5/weather?q=${searchQ}&appid=a01a81077cd503a806e77c2d7f006510`;
       const response = await axios.get(url);
       const { name, main, weather } = response.data;
       const weatherData = {

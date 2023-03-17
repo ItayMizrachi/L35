@@ -24,7 +24,13 @@ export default function WeatherForm(props) {
                   aria-label="Enter city name"
                   aria-describedby="search-button"
                 />
-                <button className="btn btn-primary" type="submit">
+                <button
+                  onClick={() => {
+                    ref.current.value;
+                  }}
+                  className="btn btn-primary"
+                  type="submit"
+                >
                   Search
                 </button>
               </div>
