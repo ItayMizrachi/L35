@@ -23,10 +23,15 @@ export default function WeatherForm(props) {
                   placeholder="Enter city name"
                   aria-label="Enter city name"
                   aria-describedby="search-button"
+                  onKeyDown={(e) => {
+                    if (e.key == "Enter") {
+                      props.doApi(ref.current.value);
+                    }
+                  }}
                 />
                 <button
                   onClick={() => {
-                    ref.current.value;
+                    props.doApi(ref.current.value);
                   }}
                   className="btn btn-primary"
                   type="submit"
