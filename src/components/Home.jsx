@@ -1,41 +1,36 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import WeatherForm from "./WeatherForm";
 import WeatherList from "./WeatherList";
 
 export default function Home() {
-  const [ar, setAr] = useState([]);
-  const searchQ = "tel-aviv";
+  const [ar, setAr] = useState({});
+  const [query] = useSearchParams();
 
   useEffect(() => {
-    doApi(searchQ);
-  }, []);
+    doApi(query.get("q") || "mexico");
+  }, [query]);
 
-  const doApi = async (searchQ) => {
+  const doApi = async (_searchQ) => {
     try {
-      const url = `https://api.openweathermap.org/data/2.5/weather?q=${searchQ}&appid=a01a81077cd503a806e77c2d7f006510`;
+      const url = `https://api.openweathermap.org/data/2.5/weather?q=${_searchQ}&appid=a01a81077cd503a806e77c2d7f006510`;
       const response = await axios.get(url);
-      const { name, main, weather } = response.data;
-      const weatherData = {
-        id: Date.now(),
-        name: name,
-        temperature: main.temp,
-        feelsLike: main.feels_like,
-        humidity: main.humidity,
-        description: weather[0].description,
-      };
-      setAr([weatherData]);
-      console.log(ar);
+      console.log(response.data);
+      setAr(response.data);
     } catch (error) {
       console.log("Error fetching weather data:", error);
+      alert("City not found");
     }
   };
 
   return (
     <div>
       <WeatherForm doApi={doApi} />
-      <h1 className="text-center">Welcome to the Weather App ! </h1>
-      <WeatherList ar={ar} />
+      <h1 className="text-center py-3 display-5">
+        Welcome to the Weather App !{" "}
+      </h1>
+      {ar.name && <WeatherList ar={ar} />}
     </div>
   );
 }

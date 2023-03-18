@@ -1,7 +1,9 @@
 import React, { useRef } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function WeatherForm(props) {
-  const ref = useRef();
+  const inputRef = useRef();
+  const nav = useNavigate();
 
   return (
     <header className="sticky-top bg-dark py-3">
@@ -14,32 +16,32 @@ export default function WeatherForm(props) {
             </p>
           </div>
           <div className="col-md-4">
-            <form>
-              <div className="input-group">
-                <input
-                  ref={ref}
-                  type="text"
-                  className="form-control"
-                  placeholder="Enter city name"
-                  aria-label="Enter city name"
-                  aria-describedby="search-button"
-                  onKeyDown={(e) => {
-                    if (e.key == "Enter") {
-                      props.doApi(ref.current.value);
-                    }
-                  }}
-                />
-                <button
-                  onClick={() => {
-                    props.doApi(ref.current.value);
-                  }}
-                  className="btn btn-primary"
-                  type="submit"
-                >
-                  Search
-                </button>
-              </div>
-            </form>
+            <div className="input-group">
+              <input
+                ref={inputRef}
+                type="text"
+                className="form-control"
+                placeholder="Enter city name"
+                aria-label="Enter city name"
+                aria-describedby="search-button"
+                onKeyDown={(e) => {
+                  if (e.key == "Enter") {
+                    // props.doApi(inputRef.current.value);
+                    nav("/?q=" + inputRef.current.value);
+                  }
+                }}
+              />
+              <button
+                onClick={() => {
+                  // props.doApi(inputRef.current.value);
+                  nav("/?q=" + inputRef.current.value);
+                }}
+                className="btn btn-primary"
+                type="submit"
+              >
+                Search
+              </button>
+            </div>
           </div>
         </div>
       </div>
