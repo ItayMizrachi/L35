@@ -11,6 +11,7 @@ this project is using react + VITE
 in order to start it 
 
 use the command `npm install` for the node_modules
+
 use the command `npm run dev` in order to run the server at localhost
 
 use only jsx files for components if u want to create new components
