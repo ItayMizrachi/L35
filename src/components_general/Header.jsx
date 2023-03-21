@@ -28,8 +28,39 @@ export default function Header() {
         >
           <ul className="navbar-nav ml-auto">
             <li className="nav-item">
-              <Link to="/" className="nav-link" style={{ color: "#ececf1" }}>
-                <strong>Page 2</strong>
+              <Link
+                to="counter"
+                className="nav-link"
+                style={{ color: "#ececf1" }}
+              >
+                <strong>Counter</strong>
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                to="favpage"
+                className="nav-link"
+                style={{ color: "#ececf1" }}
+              >
+                <strong>Fav Page</strong>
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                to="atlas"
+                className="nav-link"
+                style={{ color: "#ececf1" }}
+              >
+                <strong>Atlas</strong>
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                to="number-hook"
+                className="nav-link"
+                style={{ color: "#ececf1" }}
+              >
+                <strong>Number Hook</strong>
               </Link>
             </li>
           </ul>
