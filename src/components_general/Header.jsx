@@ -36,6 +36,33 @@ export default function Header() {
                 <strong>Page 2</strong>
               </Link>
             </li>
+            <li className="nav-item">
+              <Link
+                to="father"
+                className="nav-link"
+                style={{ color: "#ececf1" }}
+              >
+                <strong>Father</strong>
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                to="father/son"
+                className="nav-link"
+                style={{ color: "#ececf1" }}
+              >
+                <strong>father/son</strong>
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                to="father/another-son"
+                className="nav-link"
+                style={{ color: "#ececf1" }}
+              >
+                <strong>father/another-son</strong>
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>
