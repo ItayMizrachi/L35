@@ -63,6 +63,15 @@ export default function Header() {
                 <strong>Number Hook</strong>
               </Link>
             </li>
+            <li className="nav-item">
+              <Link
+                to="table"
+                className="nav-link"
+                style={{ color: "#ececf1" }}
+              >
+                <strong>Table</strong>
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>
