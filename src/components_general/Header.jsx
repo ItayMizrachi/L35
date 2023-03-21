@@ -28,7 +28,11 @@ export default function Header() {
         >
           <ul className="navbar-nav ml-auto">
             <li className="nav-item">
-              <Link to="/" className="nav-link" style={{ color: "#ececf1" }}>
+              <Link
+                to="page-2"
+                className="nav-link"
+                style={{ color: "#ececf1" }}
+              >
                 <strong>Page 2</strong>
               </Link>
             </li>
