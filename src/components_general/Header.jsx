@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { MyContext } from "../context/myContext";
 
 export default function Header() {
   const [navbarOpen, setNavbarOpen] = useState(false);
+  const { darkMode, setDarkMode } = useContext(MyContext);
+
   return (
     <header
       className=" shadow-shadow p-3  bg-dark"
@@ -34,6 +37,12 @@ export default function Header() {
             </li>
           </ul>
         </div>
+        <button
+          className={`dark-mode ${darkMode ? "dark" : "light"} btn btn-light`}
+          onClick={() => setDarkMode(!darkMode)}
+        >
+          {darkMode ? "Light Mode" : "Dark Mode"}
+        </button>
       </nav>
     </header>
   );
