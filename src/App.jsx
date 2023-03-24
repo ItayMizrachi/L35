@@ -1,10 +1,13 @@
 import "./App.css";
 import AppRouters from "./components/appRouters";
+import { MyContext } from "./context/myContext";
 
 function App() {
   return (
     <div className="App">
-      <AppRouters />
+      <MyContext.Provider>
+        <AppRouters />
+      </MyContext.Provider>
     </div>
   );
 }
