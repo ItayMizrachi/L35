@@ -1,14 +1,13 @@
-import "./App.css";
-import AppRouters from "./components/appRouters";
-
+import React from "react";
 import { MyContext } from "./context/myContext";
+import Router from "./routes/Router";
 
-function App() {
+const App = () => {
   return (
     <MyContext.Provider value={{}}>
-      <AppRouters />
+      <Router />
     </MyContext.Provider>
   );
-}
+};
 
 export default App;
