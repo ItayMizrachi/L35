@@ -1,6 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 import { API_URL, doApiMethod, TOKEN_KEY } from "../services/apiService";
 
 export default function LoginAdmin() {
@@ -28,6 +29,7 @@ export default function LoginAdmin() {
       const data = await doApiMethod(url, "POST", _bodyData);
       console.log(data);
       if (data.token) {
+        toast.success("Welcome, You logged in!");
         localStorage.setItem(TOKEN_KEY, data.token);
         nav("/admin/users");
       }
