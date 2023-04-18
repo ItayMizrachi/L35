@@ -52,6 +52,9 @@ export default function EditCategory() {
   return (
     <div className="container">
       <h1>Edit category form</h1>
+      {/* בודקים לפני שהטופס מופיע שהמידע של האייטם
+      שממלא את הערך ברירת מחדל של האינפוטים קיים
+      כדי למנוע באג לריג'סטר */}
       {item.name ? (
         <form
           onSubmit={handleSubmit(onSubForm)}
