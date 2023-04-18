@@ -9,9 +9,11 @@ import CategoriesList from "../admin/categories/CategoriesList";
 import EditCategory from "../admin/categories/EditCategory";
 import AddVideo from "../admin/videos/AddVideo";
 import VideosList from "../admin/videos/VideosList";
+import CategoryList from "../components/CategoryList";
 import Header from "../components/Header";
 import Home from "../components/Home";
 import Page404 from "../components/Page404";
+import VideoInfo from "../components/VideoInfo";
 
 const Router = () => {
   return (
@@ -22,6 +24,8 @@ const Router = () => {
       </Routes>
       <Routes>
         <Route index element={<Home />} />
+        <Route path="/category/:name" element={<CategoryList />} />
+        <Route path="/video/:id" element={<VideoInfo />} />
 
         <Route path="admin" element={<LoginAdmin />} />
         <Route path="admin/users" element={<UsersList />} />

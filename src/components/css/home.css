@@ -1,0 +1,30 @@
+.strip {
+    min-height: 350px;
+    background-position: center;
+    background-size: cover;
+    background-color: grey;
+}
+
+.categories_home a {
+    text-decoration: none;
+    color: white;
+}
+
+.categories_home .category_box {
+    min-height: 150px;
+    background-color: black;
+    background-position: center;
+    background-size: cover;
+    text-shadow: 1px 3px 0 #000000, 1px 13px 5px #000000;
+    transition: 800ms;
+}
+
+.categories_home .category_box:hover {
+    transform: scale(1.05);
+}
+
+.video_item_box .video_img {
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px 8px 0 0;
+}
