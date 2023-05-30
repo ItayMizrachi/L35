@@ -1,13 +1,20 @@
+import { configureStore } from "@reduxjs/toolkit";
+import { Provider } from "react-redux";
 import "./App.css";
-import AppRouters from "./components/appRouters";
+import AppRouters from "./components/AppRouters";
+import linksSlice from "./features/linksSlice";
 
-import { MyContext } from "./context/myContext";
+const myStore = configureStore({
+  reducer: {
+    linksSlice,
+  },
+});
 
 function App() {
   return (
-    <MyContext.Provider value={{}}>
+    <Provider store={myStore}>
       <AppRouters />
-    </MyContext.Provider>
+    </Provider>
   );
 }
 
