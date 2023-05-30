@@ -11,7 +11,7 @@ export default function LinksForm() {
 
   const onSubForm = (_bodyData) => {
     console.log(_bodyData);
-    dispatchEvent(add({ newLink: _bodyData }));
+    dispatch(add({ newLink: _bodyData }));
   };
 
   const [isFormShow, setIsFormShow] = useState(false);
