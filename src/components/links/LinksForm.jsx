@@ -1,20 +1,22 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
+import { useDispatch } from "react-redux";
 import { add } from "../../features/linksSlice";
 
 export default function LinksForm() {
+  const dispatch = useDispatch();
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
+  const [isFormShow, setIsFormShow] = useState(false);
+
   const onSubForm = (_bodyData) => {
     console.log(_bodyData);
     dispatch(add({ newLink: _bodyData }));
   };
-
-  const [isFormShow, setIsFormShow] = useState(false);
 
   return (
     <div>
