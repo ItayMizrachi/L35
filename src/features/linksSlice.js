@@ -17,8 +17,11 @@ const linkSlice = createSlice({
     name: "links",
     initialState: initialState,
     reducers: {
-
+        add: (state, { payload }) => {
+            state.links_ar.push(payload.newLink)
+        }
     }
 })
 
+export const { add } = linkSlice.actions;
 export default linkSlice.reducer;

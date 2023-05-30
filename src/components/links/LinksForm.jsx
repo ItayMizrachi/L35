@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
+import { add } from "../../features/linksSlice";
 
 export default function LinksForm() {
   const {
@@ -10,6 +11,7 @@ export default function LinksForm() {
 
   const onSubForm = (_bodyData) => {
     console.log(_bodyData);
+    dispatchEvent(add({ newLink: _bodyData }));
   };
 
   const [isFormShow, setIsFormShow] = useState(false);
